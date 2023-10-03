@@ -1,0 +1,20 @@
+[
+    {
+      "firstName": "Randi",
+      "lastName": "Brown",
+      "email": "randibrown@resumebuilder.com",
+      "password": "password01"
+    },
+    {
+        "firstName": "Will",
+        "lastName": "Gintz",
+        "email": "willgintz@resumebuilder.com",
+        "password": "password02"
+    },
+    {
+        "firstName": "Lucy",
+        "lastName": "Smith",
+        "email": "lucysmithn@resumebuilder.com",
+        "password": "password03"
+    }
+]

@@ -18,6 +18,10 @@ const jobSchema = new Schema({
     maxlength: 280,
     trim: true,
   },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  },
 });
 
 const Job = model('Job', jobSchema);
