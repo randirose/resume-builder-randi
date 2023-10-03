@@ -8,9 +8,9 @@ const skillSchema = new Schema({
     maxlength: 100,
     trim: true,
   },
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: 'User',
+  userEmail: {
+    type: String,
+    required: true,
   },
 
 });

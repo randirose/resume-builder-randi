@@ -1,38 +1,38 @@
 [
     {
         "skillName": "mongoose",
-        "user": "randibrown@resumebuilder.com"
+        "userEmail": "randibrown@resumebuilder.com"
     },
     {
         "skillName": "mongoose2",
-        "user": "randibrown@resumebuilder.com"
+        "userEmail": "randibrown@resumebuilder.com"
     },
     {
         "skillName": "mongoose3",
-        "user": "randibrown@resumebuilder.com"
+        "userEmail": "randibrown@resumebuilder.com"
     },
     {
         "skillName": "graphQL",
-        "user": "willgintz@resumebuilder.com"
+        "userEmail": "willgintz@resumebuilder.com"
     },
     {
         "skillName": "graphQL2",
-        "user": "willgintz@resumebuilder.com"
+        "userEmail": "willgintz@resumebuilder.com"
     },
     {
         "skillName": "graphQL3",
-        "user": "willgintz@resumebuilder.com"
+        "userEmail": "willgintz@resumebuilder.com"
     },
     {
         "skillName": "react",
-        "user": "lucysmith@resumebuilder.com"
+        "userEmail": "lucysmith@resumebuilder.com"
     },
     {
         "skillName": "react2",
-        "user": "lucysmith@resumebuilder.com"
+        "userEmail": "lucysmith@resumebuilder.com"
     },
     {
         "skillName": "react3",
-        "user": "lucysmith@resumebuilder.com"
+        "userEmail": "lucysmith@resumebuilder.com"
     }
 ]
