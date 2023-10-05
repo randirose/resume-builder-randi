@@ -10,8 +10,8 @@ const resolvers = {
     user: async (parent, { email }) => {
       return User.findOne({ email }).populate('jobs').populate('skills');
     },
-    jobs: async (parent, { email }) => {
-      const params = email ? { email } : {};
+    jobs: async (parent, { userEmail }) => {
+      const params = userEmail ? { userEmail } : {};
       return await Job.find(params);
     },
     job: async (parent, { jobId }) => {
@@ -23,107 +23,110 @@ const resolvers = {
     //   }
     //   throw new AuthenticationError('You need to be logged in!');
     // },
-    skills: async (parent, { email }) => {
-        const params = email ? { email } : {};
+    skills: async (parent, { userEmail }) => {
+        const params = userEmail ? { userEmail } : {};
         return Skill.find(params);
       },
     skill: async (parent, { skillId }) => {
         return Skill.findOne({ _id: skillId });
     },
   },
-}
 
-//   Mutation: {
-//     addUser: async (parent, { username, email, password }) => {
-//       const user = await User.create({ username, email, password });
-//       const token = signToken(user);
-//       return { token, user };
-//     },
-//     login: async (parent, { email, password }) => {
-//       const user = await User.findOne({ email });
 
-//       if (!user) {
-//         throw new AuthenticationError('No user found with this email address');
-//       }
+Mutation: {
+    addUser: async (parent, { firstName, lastName, email, password }) => {
+      const user = await User.create({ firstName, lastName, email, password });
+      const token = signToken(user);
 
-//       const correctPw = await user.isCorrectPassword(password);
+      return { token, user };
+    },
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
 
-//       if (!correctPw) {
-//         throw new AuthenticationError('Incorrect credentials');
-//       }
+      if (!user) {
+        throw new AuthenticationError('No user with this email found!');
+      }
 
-//       const token = signToken(user);
+      const correctPw = await user.isCorrectPassword(password);
 
-//       return { token, user };
-      
-//     },
-//     addThought: async (parent, { thoughtText }, context) => {
-//       if (context.user) {
-//         const thought = await Thought.create({
-//           thoughtText,
-//           thoughtAuthor: context.user.username,
-//         });
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect password!');
+      }
 
-//         await User.findOneAndUpdate(
-//           { _id: context.user._id },
-//           { $addToSet: { thoughts: thought._id } }
-//         );
+      const token = signToken(user);
+      return { token, user };
+    },
 
-//         return thought;
-//       }
-//       throw new AuthenticationError('You need to be logged in!');
-//     },
-//     addComment: async (parent, { thoughtId, commentText }, context) => {
-//       if (context.user) {
-//         return Thought.findOneAndUpdate(
-//           { _id: thoughtId },
-//           {
-//             $addToSet: {
-//               comments: { commentText, commentAuthor: context.user.username },
-//             },
-//           },
-//           {
-//             new: true,
-//             runValidators: true,
-//           }
-//         );
-//       }
-//       throw new AuthenticationError('You need to be logged in!');
-//     },
-//     removeThought: async (parent, { thoughtId }, context) => {
-//       if (context.user) {
-//         const thought = await Thought.findOneAndDelete({
-//           _id: thoughtId,
-//           thoughtAuthor: context.user.username,
-//         });
+    // Add a third argument to the resolver to access data in our `context`
+    addJob: async (parent, { jobTitle, employer, jobDescription, userEmail }, context) => {
+        if (context.user) {
+          const job = await Job.create({
+            jobTitle,
+            employer,
+            jobDescription,
+            userEmail: context.user.email,
+          });
+  
+          await User.findOneAndUpdate(
+            { _id: context.user._id },
+            { $addToSet: { jobs: job._id } }
+          );
+  
+          return job;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
+    addSkill: async (parent, { skillName, userEmail }, context) => {
+        if (context.user) {
+          const skill = await Skill.create({
+            skillName,
+            userEmail: context.user.email,
+          });
+  
+          await User.findOneAndUpdate(
+            { _id: context.user._id },
+            { $addToSet: { skills: skill._id } }
+          );
+  
+          return skill;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+    },
 
-//         await User.findOneAndUpdate(
-//           { _id: context.user._id },
-//           { $pull: { thoughts: thought._id } }
-//         );
+    removeJob: async (parent, { jobId }, context) => {
+        if (context.user) {
+          const job = await Job.findOneAndDelete({
+            _id: jobId,
+            userEmail: context.user.email,
+          });
+  
+          await User.findOneAndUpdate(
+            { _id: context.user._id },
+            { $pull: { jobs: job._id } }
+          );
+  
+          return job;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+    },
 
-//         return thought;
-//       }
-//       throw new AuthenticationError('You need to be logged in!');
-//     },
-//     removeComment: async (parent, { thoughtId, commentId }, context) => {
-//       if (context.user) {
-//         return Thought.findOneAndUpdate(
-//           { _id: thoughtId },
-//           {
-//             $pull: {
-//               comments: {
-//                 _id: commentId,
-//                 commentAuthor: context.user.username,
-//               },
-//             },
-//           },
-//           { new: true }
-//         );
-//       }
-//       throw new AuthenticationError('You need to be logged in!');
-//     },
-//   },
-// };
+    removeSkill: async (parent, { skillId }, context) => {
+        if (context.user) {
+          const skill = await Skill.findOneAndDelete({
+            _id: skillId,
+            userEmail: context.user.email,
+          });
+  
+          await User.findOneAndUpdate(
+            { _id: context.user._id },
+            { $pull: { skills: skill._id } }
+          );
+  
+          return skill;
+        }
+        throw new AuthenticationError('You need to be logged in!');
+    },
+  },
+};
 
 module.exports = resolvers;

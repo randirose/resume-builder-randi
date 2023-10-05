@@ -12,6 +12,7 @@ const typeDefs = gql`
   }
 
   type Job {
+    _id: ID
     jobTitle: String!
     employer: String!
     jobDescription: String!
@@ -19,6 +20,7 @@ const typeDefs = gql`
   }
 
   type Skill {
+    _id: ID
     skillName: String!
     userEmail:String
   }
@@ -31,11 +33,19 @@ const typeDefs = gql`
   type Query {
     users: [User]
     user(email: String!): User
-    jobs(email: String!): [Job]
+    jobs(userEmail: String!): [Job]
     job(jobId: ID!): Job
-    skills(email: String!): [Skill]
+    skills(userEmail: String!): [Skill]
     skill(skillId: ID!): Skill
     me: User
+  }
+  type Mutation {
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+    addJob(userId: ID!, jobTitle: String, employer: String, jobDescription: String, userEmail: String): Job
+    addSkill(userId: ID!, skillName: String!): Skill
+    removeJob(jobId: ID!): Job
+    removeSkill(skillId: ID!): Skill
   }
 `;
 
