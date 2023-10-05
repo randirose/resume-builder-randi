@@ -25,7 +25,7 @@ const resolvers = {
     // },
     skills: async (parent, { email }) => {
         const params = email ? { email } : {};
-        return Skill.find(params).populate('skills');
+        return Skill.find(params);
       },
     skill: async (parent, { skillId }) => {
         return Skill.findOne({ _id: skillId });
