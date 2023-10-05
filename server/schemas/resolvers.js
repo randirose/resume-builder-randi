@@ -10,18 +10,25 @@ const resolvers = {
     user: async (parent, { email }) => {
       return User.findOne({ email }).populate('jobs').populate('skills');
     },
-    // thoughts: async (parent, { username }) => {
-    //   const params = username ? { username } : {};
-    //   return Thought.find(params).sort({ createdAt: -1 });
+    jobs: async (parent, { email }) => {
+      const params = email ? { email } : {};
+      return await Job.find(params);
+    },
+    job: async (parent, { jobId }) => {
+      return await Job.findOne({ _id: jobId });
+    },
+    // me: async (parent, props, context) => {
+    //   if (context.user) {
+    //     return User.findOne({ _id: context.user._id }).populate('thoughts');
+    //   }
+    //   throw new AuthenticationError('You need to be logged in!');
     // },
-    // thought: async (parent, { thoughtId }) => {
-    //   return Thought.findOne({ _id: thoughtId });
-    // },
-    me: async (parent, props, context) => {
-      if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('thoughts');
-      }
-      throw new AuthenticationError('You need to be logged in!');
+    skills: async (parent, { email }) => {
+        const params = email ? { email } : {};
+        return Skill.find(params).populate('skills');
+      },
+    skill: async (parent, { skillId }) => {
+        return Skill.findOne({ _id: skillId });
     },
   },
 }
