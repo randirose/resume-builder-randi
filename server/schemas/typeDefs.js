@@ -42,8 +42,8 @@ const typeDefs = gql`
   type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addJob(userId: ID!, jobTitle: String, employer: String, jobDescription: String, userEmail: String): Job
-    addSkill(userId: ID!, skillName: String!): Skill
+    addJob(jobTitle: String, employer: String, jobDescription: String, userEmail: String): Job
+    addSkill(skillName: String!): Skill
     removeJob(jobId: ID!): Job
     removeSkill(skillId: ID!): Skill
   }

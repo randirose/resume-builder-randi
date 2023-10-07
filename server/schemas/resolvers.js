@@ -17,12 +17,12 @@ const resolvers = {
     job: async (parent, { jobId }) => {
       return await Job.findOne({ _id: jobId });
     },
-    // me: async (parent, props, context) => {
-    //   if (context.user) {
-    //     return User.findOne({ _id: context.user._id }).populate('thoughts');
-    //   }
-    //   throw new AuthenticationError('You need to be logged in!');
-    // },
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id }).populate('jobs').populate('skills');
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
     skills: async (parent, { userEmail }) => {
         const params = userEmail ? { userEmail } : {};
         return Skill.find(params);
