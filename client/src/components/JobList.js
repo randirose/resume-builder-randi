@@ -1,10 +1,46 @@
 // import { Link } from 'react-router-dom';
+import {
+    // Container,
+    // Card,
+    Button,
+    // Row,
+    // Col
+  } from 'react-bootstrap';
+
+// import Auth from '../utils/auth';
+import { REMOVE_JOB } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
+import { QUERY_ME } from '../utils/queries';
 
 const JobList = ({
   jobs,
   title,
   showTitle = true,
 }) => {
+    //eslint-disable-next-line
+    const [removeJob, { error }] = useMutation(REMOVE_JOB, {
+        update(cache, { data: { removeJob } }) {
+          try {
+            cache.writeQuery({
+              query: QUERY_ME,
+              data: { me: removeJob },
+            });
+          } catch (e) {
+            console.error(e);
+          }
+        },
+      });
+    
+      const handleRemoveJob = async (jobId) => {
+        try {
+            //eslint-disable-next-line
+          const { data } = await removeJob({
+            variables: { jobId },
+          });
+        } catch (err) {
+          console.error(err);
+        }
+      };
   if (!jobs.length) {
     return <h3>No Jobs Yet</h3>;
   }
@@ -24,6 +60,12 @@ const JobList = ({
             <div className="card-body bg-light p-2">
               <p>{job.jobDescription}</p>
             </div>
+            <Button
+                className="btn-block btn-danger"
+                onClick={() => handleRemoveJob(job._id)}
+                >
+                Delete Job
+            </Button>
             
           </div>
         ))}

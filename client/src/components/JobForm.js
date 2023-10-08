@@ -42,6 +42,7 @@ const JobForm = () => {
     event.preventDefault();
 
     try {
+        //eslint-disable-next-line
       const { data } = await addJob({
         variables: {
           ...formState,

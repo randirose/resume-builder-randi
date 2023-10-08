@@ -1,6 +1,7 @@
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
+
 import JobList from '../components/JobList';
 import JobForm from '../components/JobForm';
 import SkillList from '../components/SkillList';

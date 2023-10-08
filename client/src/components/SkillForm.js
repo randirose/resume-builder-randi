@@ -38,6 +38,7 @@ const SkillForm = () => {
     event.preventDefault();
 
     try {
+        //eslint-disable-next-line
       const { data } = await addSkill({
         variables: {
           skillName,
@@ -81,7 +82,7 @@ const SkillForm = () => {
             <div className="col-12 col-lg-9">
               <input
                 name="skillName"
-                placeholder="Enter Job Title"
+                placeholder="Enter Skill Name"
                 value={skillName}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}

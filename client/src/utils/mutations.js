@@ -47,3 +47,23 @@ mutation addSkill($skillName: String!) {
   }
 }
 `;
+
+export const REMOVE_JOB = gql`
+  mutation removeJob($jobId: ID!) {
+    removeJob(jobId: $jobId) {
+      _id
+      jobTitle
+      employer
+      jobDescription
+    }
+  }
+`;
+
+export const REMOVE_SKILL = gql`
+  mutation removeSkill($skillId: ID!) {
+    removeSkill(skillId: $skillId) {
+      _id
+      skillName
+    }
+  }
+`;
