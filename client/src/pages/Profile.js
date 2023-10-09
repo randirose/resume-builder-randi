@@ -6,6 +6,7 @@ import JobList from '../components/JobList';
 import JobForm from '../components/JobForm';
 import SkillList from '../components/SkillList';
 import SkillForm from '../components/SkillForm';
+import UserInfo from '../components/UserInfo'
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
@@ -46,8 +47,20 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {userParam ? `${user.firstName}'s` : 'Your'} jobs
+        {userParam ? `${user.firstName}'s` : 'Your'} Profile
       </h2>
+      <div className="col-12 col-md-10 mb-5">
+          <UserInfo
+            firstName={user.firstName}
+            lastName={user.lastName}
+            email={user.email}
+            phoneNumber={user.phoneNumber}
+            address={user.address}
+            linkedIn={user.linkedIn}
+            title={`${user.firstName}'s Info...`}
+            showTitle={true}
+          />
+        </div>
 
       <div className="col-12 col-md-10 mb-5">
           <JobList

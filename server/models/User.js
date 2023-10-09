@@ -23,6 +23,19 @@ const userSchema = new Schema({
     required: true,
     minlength: 8,
   },
+  phoneNumber: {
+    type: String,
+    required: true,
+    minlength: 10,
+  },
+  address: {
+    type: String,
+    required: true,
+  },
+  linkedIn: {
+    type: String,
+    required: true,
+  },
   jobs: [
     {
       type: Schema.Types.ObjectId,

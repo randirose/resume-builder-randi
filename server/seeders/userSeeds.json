@@ -3,18 +3,27 @@
       "firstName": "Randi",
       "lastName": "Brown",
       "email": "randibrown@resumebuilder.com",
-      "password": "password01"
+      "password": "password01",
+      "phoneNumber": "5035555555",
+      "address": "123 NE Ave Portland, OR",
+      "linkedIn": "https://www.linkedin.com/randi"
     },
     {
         "firstName": "Will",
         "lastName": "Gintz",
         "email": "willgintz@resumebuilder.com",
-        "password": "password02"
+        "password": "password02",
+        "phoneNumber": "5035555555",
+        "address": "123 SE Ave Portland, OR",
+        "linkedIn": "https://www.linkedin.com/randi"
     },
     {
         "firstName": "Lucy",
         "lastName": "Smith",
         "email": "lucysmith@resumebuilder.com",
-        "password": "password03"
+        "password": "password03",
+        "phoneNumber": "5035555555",
+        "address": "123 NW Ave Portland, OR",
+        "linkedIn": "https://www.linkedin.com/randi"
     }
 ]

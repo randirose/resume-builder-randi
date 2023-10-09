@@ -12,6 +12,9 @@ const Signup = () => {
     lastName: '',
     email: '',
     password: '',
+    phoneNumber: '',
+    address: '',
+    linkedIn: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -84,6 +87,30 @@ const Signup = () => {
                   name="password"
                   type="password"
                   value={formState.password}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="Your phone number"
+                  name="phoneNumber"
+                  type="text"
+                  value={formState.phoneNumber}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="Your address"
+                  name="address"
+                  type="text"
+                  value={formState.address}
+                  onChange={handleChange}
+                />
+                <input
+                  className="form-input"
+                  placeholder="Your LinkedIn URL"
+                  name="linkedIn"
+                  type="text"
+                  value={formState.linkedIn}
                   onChange={handleChange}
                 />
                 <button

@@ -6,6 +6,9 @@ query user($userId: ID!) {
       _id
       firstName
       lastName
+      phoneNumber
+      address
+      linkedIn
       jobs {
         jobTitle
         employer
@@ -42,6 +45,9 @@ export const QUERY_ME = gql`
       firstName
       lastName
       email
+      phoneNumber
+      address
+      linkedIn
       jobs {
         _id
         jobTitle
