@@ -1,14 +1,14 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Job, Skill } = require('../models');
+const { User, Job, Skill, Education } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('jobs').populate('skills');
+      return User.find().populate('jobs').populate('skills').populate('educations');
     },
     user: async (parent, { email }) => {
-      return User.findOne({ email }).populate('jobs').populate('skills');
+      return User.findOne({ email }).populate('jobs').populate('skills').populate('educations');
     },
     jobs: async (parent, { userEmail }) => {
       const params = userEmail ? { userEmail } : {};
@@ -19,7 +19,7 @@ const resolvers = {
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('jobs').populate('skills');
+        return User.findOne({ _id: context.user._id }).populate('jobs').populate('skills').populate('educations');
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -29,6 +29,13 @@ const resolvers = {
       },
     skill: async (parent, { skillId }) => {
         return Skill.findOne({ _id: skillId });
+    },
+    educations: async (parent, { userEmail }) => {
+      const params = userEmail ? { userEmail } : {};
+      return Education.find(params);
+    },
+    education: async (parent, { educationId }) => {
+      return Education.findOne({ _id: educationId });
     },
   },
 
@@ -92,6 +99,24 @@ Mutation: {
         }
         throw new AuthenticationError('You need to be logged in!');
     },
+    addEducation: async (parent, { school, dateRange, degree, userEmail }, context) => {
+      if (context.user) {
+        const education = await Education.create({
+          school,
+          dateRange,
+          degree,
+          userEmail: context.user.email,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { educations: education._id } }
+        );
+
+        return education;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
 
     removeJob: async (parent, { jobId }, context) => {
         if (context.user) {
@@ -126,6 +151,22 @@ Mutation: {
         }
         throw new AuthenticationError('You need to be logged in!');
     },
+    removeEducation: async (parent, { educationId }, context) => {
+      if (context.user) {
+        const education = await Education.findOneAndDelete({
+          _id: educationId,
+          userEmail: context.user.email,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { educations: education._id } }
+        );
+
+        return education;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+  },
   },
 };
 

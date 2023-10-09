@@ -48,6 +48,12 @@ const userSchema = new Schema({
       ref: 'Skill',
     },
   ],
+  educations: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Education',
+    },
+  ],
 });
 
 userSchema.pre('save', async function (next) {

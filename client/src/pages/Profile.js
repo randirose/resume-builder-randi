@@ -6,7 +6,9 @@ import JobList from '../components/JobList';
 import JobForm from '../components/JobForm';
 import SkillList from '../components/SkillList';
 import SkillForm from '../components/SkillForm';
-import UserInfo from '../components/UserInfo'
+import UserInfo from '../components/UserInfo';
+import EducationForm from '../components/EducationForm';
+import EducationList from '../components/EducationList';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
@@ -90,6 +92,21 @@ const Profile = () => {
             style={{ border: '1px dotted #1a1a1a' }}
           >
             <SkillForm />
+          </div>
+        )}
+          <div className="col-12 col-md-10 mb-5">
+          <EducationList
+            educations={user.educations}
+            title={`${user.firstName}'s education and certificates...`}
+            showTitle={true}
+          />
+        </div>
+        {!userParam && (
+          <div
+            className="col-12 col-md-10 mb-3 p-3"
+            style={{ border: '1px dotted #1a1a1a' }}
+          >
+            <EducationForm />
           </div>
         )}
       </div>

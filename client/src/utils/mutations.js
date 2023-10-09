@@ -51,6 +51,17 @@ mutation addSkill($skillName: String!) {
 }
 `;
 
+export const ADD_EDUCATION = gql`
+mutation addEducation($school: String!, $dateRange: String!, $degree: String!) {
+  addEducation(school: $school, dateRange: $dateRange, degree: $degree) {
+    _id
+    school
+    dateRange
+    degree
+  }
+}
+`;
+
 export const REMOVE_JOB = gql`
   mutation removeJob($jobId: ID!) {
     removeJob(jobId: $jobId) {
@@ -67,6 +78,17 @@ export const REMOVE_SKILL = gql`
     removeSkill(skillId: $skillId) {
       _id
       skillName
+    }
+  }
+`;
+
+export const REMOVE_EDUCATION = gql`
+  mutation removeEducation($educationId: ID!) {
+    removeEducation(educationId: $educationId) {
+      _id
+      school
+      dateRange
+      degree
     }
   }
 `;

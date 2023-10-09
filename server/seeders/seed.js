@@ -1,16 +1,30 @@
 const db = require('../config/connection');
-const { User, Job, Skill } = require('../models');
+const { User, Job, Skill, Education } = require('../models');
 const userSeeds = require('./userSeeds.json');
 const jobSeeds = require('./jobSeeds.json');
 const skillSeeds = require('./skillSeeds.json');
+const educationSeeds = require('./educationSeeds')
 
 db.once('open', async () => {
   try {
     await Job.deleteMany({});
     await Skill.deleteMany({});
     await User.deleteMany({});
+    await Education.deleteMany({});
 
     await User.create(userSeeds);
+
+    for (let i = 0; i < educationSeeds.length; i++) {
+      const { _id, userEmail } = await Education.create(educationSeeds[i]);
+      const user2 = await User.findOneAndUpdate(
+        { email: userEmail },
+        {
+          $addToSet: {
+            educations: _id,
+          },
+        }
+      );
+    }
 
     for (let i = 0; i < jobSeeds.length; i++) {
       const { _id, userEmail } = await Job.create(jobSeeds[i]);

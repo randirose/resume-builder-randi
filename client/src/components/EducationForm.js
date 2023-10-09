@@ -2,28 +2,28 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_JOB } from '../utils/mutations';
-import { QUERY_JOBS, QUERY_ME } from '../utils/queries';
+import { ADD_EDUCATION } from '../utils/mutations';
+import { QUERY_EDUCATIONS, QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
 
-const JobForm = () => {
+const EducationForm = () => {
 
   const [formState, setFormState] = useState({
-        jobTitle: '',
-        employer: '',
-        jobDescription: ''
+        school: '',
+        dateRange: '',
+        degree: ''
     });
 
 
-  const [addJob, { error }] = useMutation(ADD_JOB, {
-    update(cache, { data: { addJob } }) {
+  const [addEducation, { error }] = useMutation(ADD_EDUCATION, {
+    update(cache, { data: { addEducation } }) {
       try {
-        const { jobs } = cache.readQuery({ query: QUERY_JOBS });
+        const { educations } = cache.readQuery({ query: QUERY_EDUCATIONS });
 
         cache.writeQuery({
-          query: QUERY_JOBS,
-          data: { jobs: [addJob, ...jobs] },
+          query: QUERY_EDUCATIONS,
+          data: { educations: [addEducation, ...educations] },
         });
       } catch (e) {
         console.error(e);
@@ -33,7 +33,7 @@ const JobForm = () => {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me, jobs: [...me.jobs, addJob] } },
+        data: { me: { ...me, educations: [...me.educations, addEducation] } },
       });
     },
   });
@@ -43,7 +43,7 @@ const JobForm = () => {
 
     try {
         //eslint-disable-next-line
-      const { data } = await addJob({
+      const { data } = await addEducation({
         variables: {
           ...formState,
           userEmail: Auth.getProfile().data.email,
@@ -51,9 +51,9 @@ const JobForm = () => {
       });
 
       setFormState({
-        jobTitle: '',
-        employer: '',
-        jobDescription: ''
+        school: '',
+        dateRange: '',
+        degree: ''
       });
 
     } catch (err) {
@@ -73,7 +73,7 @@ const JobForm = () => {
 
   return (
     <div>
-      <h3>ADD JOB</h3>
+      <h3>ADD EDUCATION / CERTIFICATE</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -90,25 +90,25 @@ const JobForm = () => {
           >
             <div className="col-12 col-lg-9">
               <input
-                name="jobTitle"
-                placeholder="Enter Job Title"
-                value={formState.jobTitle}
+                name="school"
+                placeholder="Enter School or Company Name"
+                value={formState.school}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               />
                 <input
-                name="employer"
-                placeholder="Enter Employer"
-                value={formState.employer}
+                name="dateRange"
+                placeholder="Enter Date Range for Courses"
+                value={formState.dateRange}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               />
                 <input
-                name="jobDescription"
-                placeholder="Enter Job Description"
-                value={formState.jobDescription}
+                name="degree"
+                placeholder="Enter Degree or Certificate Name"
+                value={formState.degree}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
@@ -117,7 +117,7 @@ const JobForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Job
+                Add Education or Certificate
               </button>
             </div>
             {error && (
@@ -137,4 +137,4 @@ const JobForm = () => {
   );
 };
 
-export default JobForm;
+export default EducationForm;

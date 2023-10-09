@@ -10,9 +10,20 @@ query user($userId: ID!) {
       address
       linkedIn
       jobs {
+        _id
         jobTitle
         employer
         jobDescription
+      }
+      skills {
+        _id
+        skillName
+      }
+      educations {
+        _id
+        school
+        dateRange
+        degree
       }
     }
   }
@@ -38,6 +49,17 @@ export const QUERY_SKILLS = gql`
   }
 `;
 
+export const QUERY_EDUCATIONS = gql`
+  query getEducations {
+    educations {
+      _id
+      school
+      dateRange
+      degree
+    }
+  }
+`;
+
 export const QUERY_ME = gql`
   query me {
     me {
@@ -57,6 +79,12 @@ export const QUERY_ME = gql`
       skills {
         _id
         skillName
+      }
+      educations {
+        _id
+        school
+        dateRange
+        degree
       }
     }
   }

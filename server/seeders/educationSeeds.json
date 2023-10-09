@@ -1,0 +1,38 @@
+[
+    {
+        "school": "UofO",
+        "dateRange": "2013-2017",
+        "degree": "Computer Science",
+        "userEmail": "randibrown@resumebuilder.com"
+    },
+    {
+        "school": "Coding Bootcamp",
+        "dateRange": "2023",
+        "degree": "Certificate in full-stack coding",
+        "userEmail": "randibrown@resumebuilder.com"
+    },
+    {
+        "school": "OSU",
+        "dateRange": "2011-2015",
+        "degree": "Web Development",
+        "userEmail": "willgintz@resumebuilder.com"
+    },
+    {
+        "school": "Coding Bootcamp",
+        "dateRange": "2022",
+        "degree": "Certificate in full-stack coding",
+        "userEmail": "willgintz@resumebuilder.com"
+    },
+    {
+        "school": "Washington State",
+        "dateRange": "2010-2014",
+        "degree": "Journalism",
+        "userEmail": "lucysmith@resumebuilder.com"
+    },
+    {
+        "school": "Coding Bootcamp",
+        "dateRange": "2021",
+        "degree": "Certificate in full-stack coding",
+        "userEmail": "lucysmith@resumebuilder.com"
+    }
+]
