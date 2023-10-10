@@ -4,12 +4,12 @@ import NavApp from "./Navigation";
 function Header() {
 
   return (
-    <header className="custom-header flex-row px-1" >
+    <header className="flex-row px-1" >
 
         <NavApp />
         <div
         className='p-5 text-center bg-image'
-        style={{ backgroundImage: "url('./hero2.png')", height: 300, width: '100%' }}
+        style={{ backgroundImage: "url('./hero2.png')", height: 400, width: '100%' }}
       >
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-dark'>

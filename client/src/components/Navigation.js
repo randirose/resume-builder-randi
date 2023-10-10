@@ -12,10 +12,10 @@ const NavApp = () => {
 
   return (
     <>
-      <Navbar bg='dark' variant='dark' expand='lg'>
+      <Navbar variant='light' expand='lg' className="fixed-top">
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
-            RESUME BUILDER
+            <img src="./logo.png" alt="logo" style={{width:'50px', height: '50px', marginLeft: '10px'}} className="m3"/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
@@ -26,7 +26,7 @@ const NavApp = () => {
               {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to='/me'>
+                  <Nav.Link as={Link} to='/me' className="nav-link-custom">
                     Profile
                   </Nav.Link>
                   <Nav.Link as={Link} to='/download'>
