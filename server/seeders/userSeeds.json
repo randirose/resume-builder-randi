@@ -5,7 +5,7 @@
       "email": "randibrown@resumebuilder.com",
       "password": "password01",
       "phoneNumber": "5035555555",
-      "address": "123 NE Ave Portland, OR",
+      "address": "Portland, OR",
       "linkedIn": "https://www.linkedin.com/randi"
     },
     {
@@ -14,7 +14,7 @@
         "email": "willgintz@resumebuilder.com",
         "password": "password02",
         "phoneNumber": "5035555555",
-        "address": "123 SE Ave Portland, OR",
+        "address": "Seattle, WA",
         "linkedIn": "https://www.linkedin.com/randi"
     },
     {
@@ -23,7 +23,7 @@
         "email": "lucysmith@resumebuilder.com",
         "password": "password03",
         "phoneNumber": "5035555555",
-        "address": "123 NW Ave Portland, OR",
+        "address": "Austin, TX",
         "linkedIn": "https://www.linkedin.com/randi"
     }
 ]

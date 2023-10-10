@@ -15,7 +15,6 @@ const jobSchema = new Schema({
     type: String,
     required: true,
     minlength: 10,
-    maxlength: 280,
     trim: true,
   },
   userEmail: {
