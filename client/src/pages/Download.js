@@ -18,7 +18,7 @@ const generatePDF = () => {
     });}
 
     return (
-        <div>
+        <div className="download">
         {Auth.loggedIn() ? (
         <>
         <div id="report"><p>testing testing</p></div>

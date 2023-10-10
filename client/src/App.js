@@ -15,7 +15,7 @@ import Profile from './pages/Profile';
 import Header from './components/Header';
 // import Footer from './components/Footer';
 import Download from './pages/Download';
-// import Auth from './utils/auth';
+import Auth from './utils/auth';
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -46,22 +46,15 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        {/* <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-          <div className="container"> */}
-            <Header/>
+      {Auth.loggedIn() ? (
+        <div className="flex-column justify-flex-start min-100-vh">
+          <div className="container">
+
+            <Header />
             <Routes>
-              <Route 
+            <Route 
                 path="/" 
-                element={<Home />}
-              />
-              <Route 
-                path="/login"
-                element={<Login />}
-              />
-              <Route 
-                path="/signup"
-                element={<Signup />}
+                element={<Profile />}
               />
               <Route 
                 path="/me" 
@@ -76,13 +69,33 @@ function App() {
                 element={<Download />}
               />
               </Routes>
-              {/* <Route 
-                path="/thoughts/:thoughtId"
-                element={<SingleThought />}
-              /> */}
-          {/* </div>
-          <Footer />
-        </div> */}
+            </div>
+            </div>
+              ) : (
+              <Routes>
+              <Route 
+                path="/" 
+                element={<Home />}
+              />
+              <Route 
+                path="/login"
+                element={<Login />}
+              />
+              <Route 
+                path="/signup"
+                element={<Signup />}
+              />
+              <Route 
+                path="/download" 
+                element={<Home />}
+              />
+              <Route 
+                path="/me" 
+                element={<Home />}
+              />
+              </Routes>
+      )}
+          {/* <Footer /> */}
       </Router>
     </ApolloProvider>
   );

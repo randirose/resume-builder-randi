@@ -30,3 +30,27 @@ code {
   color: black;
   font-weight: bold;
 }
+
+
+/* Profile styling */
+
+.profile {
+  margin-top: 120px;
+}
+
+/* Download page styling */
+
+.download {
+  margin-top: 120px;
+}
+
+/* Login styling */
+.login {
+  /* margin-top: 120px; */
+}
+
+
+/* Signup styling */
+.signup {
+  /* margin-top: 120px; */
+}

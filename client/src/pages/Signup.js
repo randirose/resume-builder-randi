@@ -43,7 +43,7 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className="flex-row justify-center mb-4 signup">
       <div className="col-12 col-lg-10">
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
@@ -59,7 +59,7 @@ const Signup = () => {
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
-                  placeholder="Your first name"
+                  placeholder="First name"
                   name="firstName"
                   type="text"
                   value={formState.firstName}
@@ -67,7 +67,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your last name"
+                  placeholder="Last name"
                   name="lastName"
                   type="text"
                   value={formState.lastName}
@@ -75,7 +75,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="Email"
                   name="email"
                   type="email"
                   value={formState.email}
@@ -83,7 +83,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="********"
+                  placeholder="Password: 8 characters minimum"
                   name="password"
                   type="password"
                   value={formState.password}
@@ -91,7 +91,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your phone number"
+                  placeholder="Phone number: 5035551234"
                   name="phoneNumber"
                   type="text"
                   value={formState.phoneNumber}
@@ -99,7 +99,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your address"
+                  placeholder="Location:'Portland, OR'"
                   name="address"
                   type="text"
                   value={formState.address}
@@ -107,7 +107,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your LinkedIn URL"
+                  placeholder="LinkedIn URL"
                   name="linkedIn"
                   type="text"
                   value={formState.linkedIn}
