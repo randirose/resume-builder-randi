@@ -48,10 +48,10 @@ const Profile = () => {
 
   return (
     <div className="profile">
-      <h2 className="card-header">
+      <h2 className="profile-header card-header">
         {user.firstName}'s Profile
       </h2>
-      <div className="row">
+      <div className="row mt-3">
       <div className="col-12">
           <UserInfo
             firstName={user.firstName}
@@ -65,17 +65,18 @@ const Profile = () => {
           />
         </div>
         </div>
-      <div className="row">
+        <hr />
+      <div className="row mt-5">
       <div className="col-12 col-md-7">
           <JobList
             jobs={user.jobs}
-            title={`${user.firstName}'s jobs...`}
+            title={`${user.firstName}'s Jobs`}
             showTitle={true}
           />
         </div>
         {!userParam && (
           <div
-            className="col-12 col-md-5 mt-5 job-form-profile"
+            className="col-12 col-md-5 job-form-profile mt-5"
           >
             <JobForm />
           </div>
@@ -85,7 +86,7 @@ const Profile = () => {
         <div className="col-12 col-md-7">
           <SkillList
             skills={user.skills}
-            title={`${user.firstName}'s skills...`}
+            title={`${user.firstName}'s Skills`}
             showTitle={true}
           />
         </div>
@@ -97,11 +98,11 @@ const Profile = () => {
           </div>
         )}
         </div>
-        <div className="row mt-5">
+        <div className="row mt-5 mb-5">
           <div className="col-12 col-md-7">
           <EducationList
             educations={user.educations}
-            title={`${user.firstName}'s education and certificates...`}
+            title={`${user.firstName}'s Education & Certificates`}
             showTitle={true}
           />
         </div>

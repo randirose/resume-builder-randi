@@ -1,4 +1,4 @@
-
+import '../../src/index.css';
 
 const UserInfo = ({
   firstName,
@@ -7,32 +7,31 @@ const UserInfo = ({
   phoneNumber,
   address,
   linkedIn,
-  title,
-  showTitle = true,
+//   title,
+//   showTitle = true,
 }) => {
 
   return (
     <div>
-      {showTitle && <h3>{title}</h3>}
         
-          <div className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-                First Name: {firstName}
+          <div className="card mb-3 mt-3">
+            <h4 className="card-header text-dark p-2 m-0">
+                <span className="user-info-key">First Name:</span> {firstName}
             </h4>
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-                Last Name: {lastName}
+            <h4 className="card-header text-dark p-2 m-0">
+            <span className="user-info-key">Last Name:</span> {lastName}
             </h4>
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-                Email: {email}
+            <h4 className="card-header text-dark p-2 m-0">
+            <span className="user-info-key">Email:</span> {email}
             </h4>
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-                Phone Number: {phoneNumber}
+            <h4 className="card-header text-dark p-2 m-0">
+            <span className="user-info-key">Phone Number:</span> {phoneNumber}
             </h4>
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-                Address: {address}
+            <h4 className="card-header text-dark p-2 m-0">
+            <span className="user-info-key">Location:</span> {address}
             </h4>
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-                LinkedIn URL: {linkedIn}
+            <h4 className="card-header text-dark p-2 m-0">
+            <span className="user-info-key">LinkedIn:</span> {linkedIn}
             </h4>
             
           </div>

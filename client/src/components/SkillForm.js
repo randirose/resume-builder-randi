@@ -70,11 +70,11 @@ const SkillForm = () => {
       {Auth.loggedIn() ? (
         <>
           <form
-            className="skill-form flex-row justify-center justify-space-between-md align-center"
+            className="skill-form flex-row justify-center justify-space-between-md align-center mb-2"
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
-            <label for="skillName" class="form-label mt-3">Skill Name</label>
+            <label for="skillName" class="form-label mt-1">Skill Name</label>
               <input
                 name="skillName"
                 placeholder="'HTML'"

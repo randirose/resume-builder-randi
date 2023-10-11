@@ -12,6 +12,7 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
 import { AiFillPhone } from "react-icons/ai";
+import { GrCertificate } from "react-icons/gr";
 
 
 // import { Link } from 'react-router-dom';
@@ -105,7 +106,7 @@ const generatePDF = () => {
                             <span className="resume-school">{education.school}</span>{' '}|{' '}{education.dateRange}
                         </h6>
                         <p className="edu-degree">
-                            {education.degree}
+                            <GrCertificate /> {education.degree}
                         </p>
 
                         </div>

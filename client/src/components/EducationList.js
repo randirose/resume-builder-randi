@@ -1,3 +1,4 @@
+import '../../src/index.css';
 // import { Link } from 'react-router-dom';
 import {
     // Container,
@@ -6,6 +7,8 @@ import {
     // Row,
     // Col
   } from 'react-bootstrap';
+import { GrCertificate } from "react-icons/gr";
+  
 
 // import Auth from '../utils/auth';
 import { REMOVE_EDUCATION } from '../utils/mutations';
@@ -46,27 +49,25 @@ const EducationList = ({
   }
 
   return (
-    <div>
-      {showTitle && <h3>{title}</h3>}
+    <div className="edu-list mt-2">
+      {showTitle && <h3>{title}<hr /></h3>}
       {educations &&
         educations.map((education) => (
-          <div key={education._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-                {education.school}
-            </h4>
-            <div className="card-body bg-light p-2">
-              <p>{education.dateRange}</p>
-            </div>
-            <div className="card-body bg-light p-2">
-              <p>{education.degree}</p>
-            </div>
-            <Button
-                className="btn-block btn-danger"
+          <div key={education._id} className="card mt-3">
+            <h4 className="card-header p-2 m-0">
+                {education.school} | {education.dateRange}
+                <Button
+                className="btn btn-secondary"
+                style={{float: 'right', align: 'center'}}
                 onClick={() => handleRemoveEducation(education._id)}
                 >
-                Delete Education/Certificate
+                X
             </Button>
+            </h4>
+            <div className="card-body bg-light p-2">
+                <span className="edu-icon"><GrCertificate /> |</span> <span className="edu-text">{education.degree}</span>
             
+            </div>
           </div>
         ))}
     </div>

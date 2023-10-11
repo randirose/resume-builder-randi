@@ -1,3 +1,4 @@
+import '../../src/index.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
@@ -14,28 +15,30 @@ const NavApp = () => {
     <>
       <Navbar variant='light' expand='lg' className="fixed-top">
         <Container fluid>
+        {Auth.loggedIn() ? (
           <Navbar.Brand as={Link} to='/'>
+            <img src="./logo.png" alt="logo" style={{width:'50px', height: '50px', marginLeft: '10px'}} className="m3"/> <span className="loggedin-nav-brand">RESUME BUILDER</span>
+          </Navbar.Brand>
+        ) : (
+            <Navbar.Brand as={Link} to='/'>
             <img src="./logo.png" alt="logo" style={{width:'50px', height: '50px', marginLeft: '10px'}} className="m3"/>
           </Navbar.Brand>
+        )}
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
             <Nav className='ml-auto d-flex'>
-              {/* <Nav.Link as={Link} to='/login'>
-                
-              </Nav.Link> */}
-              {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to='/me' className="nav-link-custom">
+                  <Nav.Link as={Link} to='/me' style={{fontWeight: 'bold', fontSize: '120%'}}>
                     Profile
                   </Nav.Link>
-                  <Nav.Link as={Link} to='/download'>
+                  <Nav.Link as={Link} to='/download' style={{fontWeight: 'bold', fontSize: '120%'}}>
                     Preview/Download
                   </Nav.Link>
-                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                  <Nav.Link onClick={Auth.logout} style={{fontWeight: 'bold', fontSize: '120%'}}>Logout</Nav.Link>
                 </>
               ) : (
-                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+                <Nav.Link onClick={() => setShowModal(true)} style={{fontWeight: 'bold', fontSize: '120%'}}>Login / Sign Up</Nav.Link>
               )}
             </Nav>
           </Navbar.Collapse>

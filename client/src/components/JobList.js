@@ -1,3 +1,4 @@
+import '../../src/index.css';
 // import { Link } from 'react-router-dom';
 import {
     // Container,
@@ -46,13 +47,20 @@ const JobList = ({
   }
 
   return (
-    <div>
-      {showTitle && <h3>{title}</h3>}
+    <div className="job-list mt-2">
+      {showTitle && <h3>{title}<hr /></h3>}
       {jobs &&
         jobs.map((job) => (
-          <div key={job._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
+          <div key={job._id} className="card mt-3">
+            <h4 className="card-header p-2 m-0">
                 {job.jobTitle}
+                <Button
+                className="btn btn-secondary"
+                style={{float: 'right', align: 'center'}}
+                onClick={() => handleRemoveJob(job._id)}
+                >
+                X
+            </Button>
             </h4>
             <div className="card-body bg-light p-2">
               <p>{job.employer}</p>
@@ -60,12 +68,6 @@ const JobList = ({
             <div className="card-body bg-light p-2">
               <p>{job.jobDescription}</p>
             </div>
-            <Button
-                className="btn-block btn-danger"
-                onClick={() => handleRemoveJob(job._id)}
-                >
-                Delete Job
-            </Button>
             
           </div>
         ))}

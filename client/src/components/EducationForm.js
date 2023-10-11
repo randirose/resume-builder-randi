@@ -82,7 +82,7 @@ const EducationForm = () => {
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
-            <label for="school" class="form-label mt-3">School / Org</label>
+            <label for="school" class="form-label mt-1">School / Org</label>
               <input
                 name="school"
                 placeholder="'UofO'"
@@ -105,7 +105,7 @@ const EducationForm = () => {
                 name="degree"
                 placeholder="'BS in Comp Sci'"
                 value={formState.degree}
-                className="form-input w-100"
+                className="form-input w-100 p-2"
                 style={{ lineHeight: '2', resize: 'vertical' }}
                 onChange={handleChange}
               />

@@ -13,8 +13,9 @@ function Home() {
       >
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-dark'>
-              <h1 className='mb-3'>RESUME BUILDER</h1>
-              <h4 className='mb-3'>—Easily build a perfect resume!—</h4>
+              <h1 className='loggedout-header mb-3'>RESUME BUILDER</h1>
+              <h2 className='mb-3'>— Easily build a perfect resume! —</h2><br />
+              <h4 className='home-text'>Simply sign up or login using the link above, then add your jobs, skills, and education and <span style={{fontStyle: 'italic'}}>voila</span>, download a PDF of your customized resume!</h4>
             </div>
           </div>
         </div>

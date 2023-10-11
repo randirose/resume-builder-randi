@@ -44,23 +44,26 @@ const SkillList = ({
     }
   
     return (
-      <div>
-        {showTitle && <h3>{title}</h3>}
+      <div className="skill-list mt-2">
+        {showTitle && <h3>{title}<hr /></h3>}
+        
         {skills &&
           skills.map((skill) => (
-            <div key={skill._id} className="card mb-3">
-              <h4 className="card-header bg-primary text-light p-2 m-0">
+            <div key={skill._id} className="card mt-3">
+              <h4 className="card-header p-2 m-0">
                   {skill.skillName}
-              </h4>
+              
               <Button
-                className="btn-block btn-danger"
+                className="btn btn-secondary"
+                style={{float: 'right'}}
                 onClick={() => handleRemoveSkill(skill._id)}
                 >
-                Delete Skill
+                X
             </Button>
-              
+            </h4>
             </div>
           ))}
+        
       </div>
     );
   };

@@ -83,7 +83,7 @@ const JobForm = () => {
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
-              <label for="jobTitle" class="form-label mt-3">Job Title</label>
+              <label for="jobTitle" class="form-label mt-1">Job Title</label>
               <input
                 name="jobTitle"
                 placeholder="'Web Developer'"
