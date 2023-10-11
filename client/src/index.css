@@ -37,6 +37,59 @@ code {
 .profile {
   margin-top: 120px;
 }
+ /* job form styling */
+.job-form-profile {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.add-job button {
+  width: 75%;
+  color: black;
+  background-color: #d3e9ed;
+  font-weight: bolder;
+  border: .5px solid black;
+}
+
+/* skill form styling */
+.skill-form-profile {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.add-skill button {
+  width: 75%;
+  color: black;
+  background-color: #d3e9ed;
+  font-weight: bolder;
+  border: .5px solid black;
+}
+
+/* edu form styling */
+
+.edu-form-profile {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.add-edu button {
+  width: 75%;
+  color: black;
+  background-color: #d3e9ed;
+  font-weight: bolder;
+  border: .5px solid black;
+}
+
+ /* generic form styling */
+.form-input {
+  border-radius: 10px;
+}
+
+.form-label {
+  font-weight: bolder;
+}
+
+
 
 /* Download page styling */
 

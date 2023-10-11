@@ -49,9 +49,10 @@ const Profile = () => {
   return (
     <div className="profile">
       <h2 className="card-header">
-        {userParam ? `${user.firstName}'s` : 'Your'} Profile
+        {user.firstName}'s Profile
       </h2>
-      <div className="col-12 col-md-10 mb-5">
+      <div className="row">
+      <div className="col-12">
           <UserInfo
             firstName={user.firstName}
             lastName={user.lastName}
@@ -63,8 +64,9 @@ const Profile = () => {
             showTitle={true}
           />
         </div>
-
-      <div className="col-12 col-md-10 mb-5">
+        </div>
+      <div className="row">
+      <div className="col-12 col-md-7">
           <JobList
             jobs={user.jobs}
             title={`${user.firstName}'s jobs...`}
@@ -73,13 +75,14 @@ const Profile = () => {
         </div>
         {!userParam && (
           <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
+            className="col-12 col-md-5 mt-5 job-form-profile"
           >
             <JobForm />
           </div>
         )}
-        <div className="col-12 col-md-10 mb-5">
+        </div>
+        <div className="row mt-5">
+        <div className="col-12 col-md-7">
           <SkillList
             skills={user.skills}
             title={`${user.firstName}'s skills...`}
@@ -88,13 +91,14 @@ const Profile = () => {
         </div>
         {!userParam && (
           <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
+            className="col-12 col-md-5 skill-form-profile mt-5"
           >
             <SkillForm />
           </div>
         )}
-          <div className="col-12 col-md-10 mb-5">
+        </div>
+        <div className="row mt-5">
+          <div className="col-12 col-md-7">
           <EducationList
             educations={user.educations}
             title={`${user.firstName}'s education and certificates...`}
@@ -103,12 +107,12 @@ const Profile = () => {
         </div>
         {!userParam && (
           <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
+            className="col-12 col-md-5 edu-form-profile mt-5"
           >
             <EducationForm />
           </div>
         )}
+        </div>
       </div>
   );
 };

@@ -1,3 +1,4 @@
+import '../../src/index.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
@@ -73,50 +74,47 @@ const JobForm = () => {
 
   return (
     <div>
-      <h3>ADD JOB</h3>
-
+      <h3 className="jobForm-header mt-2">ADD JOB</h3>
+      <hr />
       {Auth.loggedIn() ? (
         <>
-          {/* <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
-          >
-            Character Count: {characterCount}/280
-          </p> */}
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className="job-form flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
+              <label for="jobTitle" class="form-label mt-3">Job Title</label>
               <input
                 name="jobTitle"
-                placeholder="Enter Job Title"
+                placeholder="'Web Developer'"
                 value={formState.jobTitle}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                className="form-input w-100 p-2"
+                style={{ lineHeight: '2', resize: 'vertical' }}
                 onChange={handleChange}
               />
+              <label for="employer" class="form-label mt-3">Employer</label>
                 <input
                 name="employer"
-                placeholder="Enter Employer"
+                placeholder="'Google Inc'"
                 value={formState.employer}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                className="form-input w-100 p-2"
+                style={{ lineHeight: '2', resize: 'vertical' }}
                 onChange={handleChange}
               />
-                <input
+              <label for="jobDescription" class="form-label mt-3">Job Description</label>
+                <textarea
                 name="jobDescription"
-                placeholder="Enter Job Description"
+                placeholder="Describe what your position entailed here"
                 value={formState.jobDescription}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                className="form-input w-100 p-2"
+                style={{ lineHeight: '2', resize: 'vertical' }}
+                rows='10'
                 onChange={handleChange}
               />
             </div>
 
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+            <div className="col-12 add-job">
+              <button className="btn btn-secondary p-3" type="submit">
                 Add Job
               </button>
             </div>

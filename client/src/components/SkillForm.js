@@ -1,3 +1,4 @@
+import '../../src/index.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
@@ -64,34 +65,28 @@ const SkillForm = () => {
 
   return (
     <div>
-      <h3>ADD SKILL</h3>
-
+      <h3 className="skillForm-header mt-2">ADD SKILL</h3>
+      <hr />
       {Auth.loggedIn() ? (
         <>
-          {/* <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
-          >
-            Character Count: {characterCount}/280
-          </p> */}
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className="skill-form flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
+            <label for="skillName" class="form-label mt-3">Skill Name</label>
               <input
                 name="skillName"
-                placeholder="Enter Skill Name"
+                placeholder="'HTML'"
                 value={skillName}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                className="form-input w-100 p-2"
+                style={{ lineHeight: '2', resize: 'vertical' }}
                 onChange={handleChange}
               />
             </div>
 
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+            <div className="col-12 add-skill">
+              <button className="btn btn-secondary py-3 mt-2" type="submit">
                 Add Skill
               </button>
             </div>

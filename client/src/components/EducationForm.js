@@ -73,51 +73,47 @@ const EducationForm = () => {
 
   return (
     <div>
-      <h3>ADD EDUCATION / CERTIFICATE</h3>
-
+      <h3 className="eduForm-header mt-2">ADD EDUCATION / CERTIFICATE</h3>
+        <hr />
       {Auth.loggedIn() ? (
         <>
-          {/* <p
-            className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
-            }`}
-          >
-            Character Count: {characterCount}/280
-          </p> */}
           <form
-            className="flex-row justify-center justify-space-between-md align-center"
+            className="edu-form flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
+            <label for="school" class="form-label mt-3">School / Org</label>
               <input
                 name="school"
-                placeholder="Enter School or Company Name"
+                placeholder="'UofO'"
                 value={formState.school}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                className="form-input w-100 p-2"
+                style={{ lineHeight: '2', resize: 'vertical' }}
                 onChange={handleChange}
               />
+              <label for="dateRange" class="form-label mt-3">Time Frame</label>
                 <input
                 name="dateRange"
-                placeholder="Enter Date Range for Courses"
+                placeholder="'2023-24'"
                 value={formState.dateRange}
-                className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                className="form-input w-100 p-2"
+                style={{ lineHeight: '2', resize: 'vertical' }}
                 onChange={handleChange}
               />
+              <label for="degree" class="form-label mt-3">Degree / Certificate</label>
                 <input
                 name="degree"
-                placeholder="Enter Degree or Certificate Name"
+                placeholder="'BS in Comp Sci'"
                 value={formState.degree}
                 className="form-input w-100"
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                style={{ lineHeight: '2', resize: 'vertical' }}
                 onChange={handleChange}
               />
             </div>
 
-            <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Education or Certificate
+            <div className="col-12 add-edu">
+              <button className="btn btn-secondary py-3 mt-2 mb-2" type="submit">
+                Add Education / Certificate
               </button>
             </div>
             {error && (
