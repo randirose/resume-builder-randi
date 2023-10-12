@@ -81,7 +81,7 @@ const EducationForm = () => {
             className="edu-form flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
+            <div className="col-12">
             <label for="school" class="form-label mt-1">School / Org</label>
               <input
                 name="school"

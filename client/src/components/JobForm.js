@@ -82,14 +82,14 @@ const JobForm = () => {
             className="job-form flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
+            <div className="col-12">
               <label for="jobTitle" class="form-label mt-1">Job Title</label>
               <input
                 name="jobTitle"
                 placeholder="'Web Developer'"
                 value={formState.jobTitle}
                 className="form-input w-100 p-2"
-                style={{ lineHeight: '2', resize: 'vertical' }}
+                style={{ lineHeight: '2', resize: 'vertical'}}
                 onChange={handleChange}
               />
               <label for="employer" class="form-label mt-3">Employer</label>

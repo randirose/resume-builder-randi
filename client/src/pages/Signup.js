@@ -1,3 +1,4 @@
+import '../../src/index.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -46,7 +47,7 @@ const Signup = () => {
     <main className="flex-row justify-center mb-4 signup">
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <h4 className="card-header p-2">Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -57,68 +58,117 @@ const Signup = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <div className="row">
+                <div className="col-12">
+                <label for="firstName" class="form-label mt-1">First Name: </label>
+                </div></div>
+                <div className="row">
+                <div className="col-12">
                 <input
                   className="form-input"
                   placeholder="First name"
                   name="firstName"
                   type="text"
+                  style={{ lineHeight: '2', resize: 'vertical', width: '100%' }}
                   value={formState.firstName}
                   onChange={handleChange}
-                />
+                /></div></div>
+                <div className="row">
+                <div className="col-12">
+                <label for="lastName" class="form-label mt-1">Last Name: </label>
+                </div></div>
+                <div className="row">
+                <div className="col-12">
                 <input
                   className="form-input"
                   placeholder="Last name"
                   name="lastName"
                   type="text"
+                  style={{ lineHeight: '2', resize: 'vertical', width: '100%' }}
                   value={formState.lastName}
                   onChange={handleChange}
-                />
+                /></div></div>
+                <div className="row">
+                <div className="col-12">
+                <label for="email" class="form-label mt-1">Email: </label>
+                </div></div>
+                <div className="row">
+                <div className="col-12">
                 <input
                   className="form-input"
-                  placeholder="Email"
+                  placeholder="'janedoe@gmail.com'"
                   name="email"
                   type="email"
+                  style={{ lineHeight: '2', resize: 'vertical', width: '100%' }}
                   value={formState.email}
                   onChange={handleChange}
-                />
+                /></div></div>
+                <div className="row">
+                <div className="col-12">
+                <label for="password" class="form-label mt-1">Password: </label>
+                </div></div>
+                <div className="row">
+                <div className="col-12">
                 <input
                   className="form-input"
-                  placeholder="Password: 8 characters minimum"
+                  placeholder="8 characters minimum"
                   name="password"
                   type="password"
+                  style={{ lineHeight: '2', resize: 'vertical', width: '100%' }}
                   value={formState.password}
                   onChange={handleChange}
-                />
+                /></div></div>
+                <div className="row">
+                <div className="col-12">
+                <label for="phoneNumber" class="form-label mt-1">Phone Number: </label>
+                </div></div>
+                <div className="row">
+                <div className="col-12">
                 <input
                   className="form-input"
-                  placeholder="Phone number: 5035551234"
+                  placeholder="5035551234"
                   name="phoneNumber"
                   type="text"
+                  style={{ lineHeight: '2', resize: 'vertical', width: '100%' }}
                   value={formState.phoneNumber}
                   onChange={handleChange}
-                />
+                /></div></div>
+                <div className="row">
+                <div className="col-12">
+                <label for="location" class="form-label mt-1">Location: </label>
+                </div></div>
+                <div className="row">
+                <div className="col-12">
                 <input
                   className="form-input"
-                  placeholder="Location:'Portland, OR'"
+                  placeholder="'Portland, OR'"
                   name="address"
                   type="text"
+                  style={{ lineHeight: '2', resize: 'vertical', width: '100%' }}
                   value={formState.address}
                   onChange={handleChange}
-                />
+                /></div></div>
+                <div className="row">
+                <div className="col-12">
+                <label for="linkedIn" class="form-label mt-1">LinkedIn URL: </label>
+                </div></div>
+                <div className="row">
+                <div className="col-12">
                 <input
                   className="form-input"
-                  placeholder="LinkedIn URL"
+                  placeholder="'www.linkedin.com/yourprofile'"
                   name="linkedIn"
                   type="text"
+                  style={{ lineHeight: '2', resize: 'vertical', width: '100%' }}
                   value={formState.linkedIn}
                   onChange={handleChange}
-                />
+                /></div></div>
                 <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
+                  className="btn btn-secondary mt-2"
+                  style={{ cursor: 'pointer', width: '100%' }}
                   type="submit"
                 >
-                  Submit
+                  Sign Up
                 </button>
               </form>
             )}

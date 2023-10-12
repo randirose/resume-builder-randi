@@ -69,6 +69,7 @@ const generatePDF = () => {
     return (
         <>
         <div className="download">
+        <div id="wrapper">
         <div id="resume">
         <h3 className="resume-header d-flex flex-row-reverse">{user.firstName} {user.lastName}</h3>
         <hr className="dividers"/>
@@ -137,7 +138,7 @@ const generatePDF = () => {
                 </div>
             </div>
         </div>
-
+        </div>
         </div>
 
         </div>
