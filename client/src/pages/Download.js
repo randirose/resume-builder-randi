@@ -69,12 +69,17 @@ const generatePDF = () => {
     return (
         <>
         <div className="download">
+        <h3 style={{textAlign: 'center'}}>View and download your resume below:</h3>
+        <div>
+        <Button onClick={generatePDF} type="button" className="btn btn-secondary download-button">Download Resume (PDF)</Button>
+        </div>
         <div id="wrapper">
+        
         <div id="resume">
         <h3 className="resume-header d-flex flex-row-reverse">{user.firstName} {user.lastName}</h3>
         <hr className="dividers"/>
         <div className="row">
-            <div className="col-12 col-md-4 aside">
+            <div className="col-4 aside">
                 {/* contact and skills */}
                 <div className="contact-info">
                     <h4 className="aside-header">Contact Me:</h4>
@@ -116,7 +121,7 @@ const generatePDF = () => {
                 </div>
                 
             </div>
-            <div className="col-12 col-md-8">
+            <div className="col-8">
                 {/* jobs and edu */}
                 <div className="resume-jobs d-flex flex-wrap">
                 <h4 className="aside-header jobs-header">Work Experience:</h4>
@@ -142,9 +147,7 @@ const generatePDF = () => {
         </div>
 
         </div>
-        <div>
-        <Button onClick={generatePDF} type="button" className="download-button">Export PDF</Button>
-        </div>
+
         </>
       );
     };

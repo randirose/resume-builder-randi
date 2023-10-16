@@ -10,6 +10,8 @@ import Auth from '../utils/auth';
 const NavApp = () => {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
     <>
@@ -24,21 +26,25 @@ const NavApp = () => {
             <img src="./logo.png" alt="logo" style={{width:'50px', height: '50px', marginLeft: '10px'}} className="m3"/>
           </Navbar.Brand>
         )}
-          <Navbar.Toggle aria-controls='navbar' />
+          <Navbar.Toggle aria-controls='navbar' aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}/>
           <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
             <Nav className='ml-auto d-flex'>
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to='/me' style={{fontWeight: 'bold', fontSize: '120%'}}>
+                <div class={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>
+                  <Nav.Link as={Link} to='/me' style={{fontWeight: 'bold', fontSize: '120%'}} onClick={handleNavCollapse}>
                     Profile
                   </Nav.Link>
-                  <Nav.Link as={Link} to='/download' style={{fontWeight: 'bold', fontSize: '120%'}}>
+                  <Nav.Link as={Link} to='/download' style={{fontWeight: 'bold', fontSize: '120%'}} onClick={handleNavCollapse}>
                     Preview/Download
                   </Nav.Link>
                   <Nav.Link onClick={Auth.logout} style={{fontWeight: 'bold', fontSize: '120%'}}>Logout</Nav.Link>
+                  </div>
                 </>
               ) : (
+                <div class={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>
                 <Nav.Link onClick={() => setShowModal(true)} style={{fontWeight: 'bold', fontSize: '120%'}}>Login / Sign Up</Nav.Link>
+                </div>
               )}
             </Nav>
           </Navbar.Collapse>
@@ -54,12 +60,12 @@ const NavApp = () => {
         <Tab.Container defaultActiveKey='login'>
           <Modal.Header closeButton>
             <Modal.Title id='signup-modal'>
-              <Nav variant='pills'>
+              <Nav variant='underline'>
                 <Nav.Item>
-                  <Nav.Link eventKey='login'>Login</Nav.Link>
+                  <Nav.Link eventKey='login' style={{color: 'black', marginRight: '2px'}}>Login</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+                  <Nav.Link eventKey='signup' style={{color: 'black' }}>Sign Up</Nav.Link>
                 </Nav.Item>
               </Nav>
             </Modal.Title>

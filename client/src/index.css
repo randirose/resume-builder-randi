@@ -72,8 +72,13 @@ code {
   background-color: #d3e9ed;
 }
 
+/* login styling */
 .login h4 {
   background-color: #d3e9ed;
+}
+
+#login-tab {
+  color: darkgray;
 }
 
 .signup h4 {
@@ -108,13 +113,12 @@ code {
 
 .form-input {
   border-radius: 10px;
+  padding: 5px;
 }
 
 .form-label {
   font-weight: bolder;
 }
-
-
 
 /* Download page styling */
 
@@ -126,6 +130,7 @@ code {
   margin-left:auto;
   margin-right:auto;
   width:1500px;
+  margin-bottom: 20px;
 }
 
 #resume {
@@ -135,7 +140,7 @@ code {
   /* padding-right: 300px; */
   padding-left: 75px;
   padding-right: 75px;
-  margin-top: 150px;
+  margin-top: 20px;
   /* border: .5px solid lightgray; */
 }
 
@@ -170,7 +175,9 @@ code {
 .download-button {
   margin-top: 30px;
   margin-bottom: 30px;
-  width: 100%;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .jobs-header {
@@ -180,13 +187,3 @@ code {
 .resume-jobs {
   width: 100%;
 }
-/* Login styling */
-/* .login {
-
-} */
-
-
-/* Signup styling */
-/* .signup {
-
-} */
