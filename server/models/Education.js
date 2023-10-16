@@ -13,16 +13,13 @@ const educationSchema = new Schema({
   },
   degree: {
     type: String,
+    required: true,
     trim: true,
   },
   userEmail: {
     type: String,
     required: true,
   },
-//   user: {
-//     type: Schema.Types.ObjectId,
-//     ref: 'User',
-//   },
 });
 
 const Education = model('Education', educationSchema);

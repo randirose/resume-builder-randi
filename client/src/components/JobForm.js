@@ -108,7 +108,7 @@ const JobForm = () => {
                 value={formState.jobDescription}
                 className="form-input w-100 p-2"
                 style={{ lineHeight: '2', resize: 'vertical' }}
-                rows='10'
+                rows='8'
                 onChange={handleChange}
               />
             </div>
@@ -120,7 +120,7 @@ const JobForm = () => {
             </div>
             {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">
-                {error.message}
+                {error.message.substring(22)}
               </div>
             )}
           </form>

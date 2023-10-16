@@ -92,7 +92,7 @@ const SkillForm = () => {
             </div>
             {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">
-                {error.message}
+                Skill name is required
               </div>
             )}
           </form>

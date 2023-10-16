@@ -53,7 +53,7 @@ const JobList = ({
         jobs.map((job) => (
           <div key={job._id} className="card mt-3">
             <h4 className="card-header p-2 m-0">
-                {job.jobTitle}
+                {job.jobTitle} | {job.employer}
                 <Button
                 className="btn btn-secondary"
                 style={{float: 'right', align: 'center'}}
@@ -62,9 +62,6 @@ const JobList = ({
                 X
             </Button>
             </h4>
-            <div className="card-body bg-light p-2">
-              <p>{job.employer}</p>
-            </div>
             <div className="card-body bg-light p-2">
               <p>{job.jobDescription}</p>
             </div>

@@ -33,7 +33,7 @@ const typeDefs = gql`
     _id: ID
     school: String!
     dateRange: String!
-    degree: String
+    degree: String!
     userEmail:String
   }
 
@@ -58,7 +58,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addJob(jobTitle: String!, employer: String!, jobDescription: String!, userEmail: String): Job
     addSkill(skillName: String!): Skill
-    addEducation(school: String!, dateRange: String!, degree: String, userEmail: String): Education
+    addEducation(school: String!, dateRange: String!, degree: String!, userEmail: String): Education
     removeJob(jobId: ID!): Job
     removeSkill(skillId: ID!): Skill
     removeEducation(educationId: ID!): Education

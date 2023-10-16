@@ -1,11 +1,6 @@
 import '../../src/index.css';
-// import { Link } from 'react-router-dom';
 import {
-    // Container,
-    // Card,
     Button,
-    // Row,
-    // Col
   } from 'react-bootstrap';
 import { GrCertificate } from "react-icons/gr";
   
@@ -64,7 +59,7 @@ const EducationList = ({
                 X
             </Button>
             </h4>
-            <div className="card-body bg-light p-2">
+            <div className="d-flex align-items-center card-body bg-light p-2">
                 <span className="edu-icon"><GrCertificate /> |</span> <span className="edu-text">{education.degree}</span>
             
             </div>

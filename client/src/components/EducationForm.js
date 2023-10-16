@@ -118,7 +118,7 @@ const EducationForm = () => {
             </div>
             {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">
-                {error.message}
+                {error.message.substring(28)}
               </div>
             )}
           </form>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
+// import { validateEmail } from "../utils/validateEmail";
 
 import Auth from '../utils/auth';
 
@@ -18,6 +19,7 @@ const Signup = () => {
     linkedIn: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
+  // const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -28,8 +30,8 @@ const Signup = () => {
     });
   };
 
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
     console.log(formState);
 
     try {
@@ -175,7 +177,7 @@ const Signup = () => {
 
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
+                SIGNUP ERROR: {error.message.substring(23)}
               </div>
             )}
           </div>
