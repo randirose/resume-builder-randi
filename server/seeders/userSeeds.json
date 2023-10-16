@@ -15,7 +15,7 @@
         "password": "password02",
         "phoneNumber": "5035555555",
         "address": "Seattle, WA",
-        "linkedIn": "https://www.linkedin.com/randi"
+        "linkedIn": "https://www.linkedin.com/will"
     },
     {
         "firstName": "Lucy",
@@ -24,6 +24,6 @@
         "password": "password03",
         "phoneNumber": "5035555555",
         "address": "Austin, TX",
-        "linkedIn": "https://www.linkedin.com/randi"
+        "linkedIn": "https://www.linkedin.com/lucy"
     }
 ]

@@ -1,38 +1,46 @@
 [
     {
-        "skillName": "mongoose",
+        "skillName": "Mongoose",
         "userEmail": "randibrown@resumebuilder.com"
     },
     {
-        "skillName": "mongoose2",
+        "skillName": "GraphQL",
         "userEmail": "randibrown@resumebuilder.com"
     },
     {
-        "skillName": "mongoose3",
+        "skillName": "MySQL",
         "userEmail": "randibrown@resumebuilder.com"
     },
     {
-        "skillName": "graphQL",
+        "skillName": "HTML",
+        "userEmail": "randibrown@resumebuilder.com"
+    },
+    {
+        "skillName": "Mongoose",
         "userEmail": "willgintz@resumebuilder.com"
     },
     {
-        "skillName": "graphQL2",
+        "skillName": "GraphQL",
         "userEmail": "willgintz@resumebuilder.com"
     },
     {
-        "skillName": "graphQL3",
+        "skillName": "React",
         "userEmail": "willgintz@resumebuilder.com"
     },
     {
-        "skillName": "react",
+        "skillName": "MySQL",
+        "userEmail": "willgintz@resumebuilder.com"
+    },
+    {
+        "skillName": "MySQL",
         "userEmail": "lucysmith@resumebuilder.com"
     },
     {
-        "skillName": "react2",
+        "skillName": "HTML",
         "userEmail": "lucysmith@resumebuilder.com"
     },
     {
-        "skillName": "react3",
+        "skillName": "React",
         "userEmail": "lucysmith@resumebuilder.com"
     }
 ]

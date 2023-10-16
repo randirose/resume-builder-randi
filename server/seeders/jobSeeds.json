@@ -2,37 +2,49 @@
     {
         "jobTitle": "Web Developer",
         "employer": "Google",
-        "jobDescription": "Fixed bugs for leading tech company",
+        "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "userEmail": "randibrown@resumebuilder.com"
     },
     {
-        "jobTitle": "Web Developer2",
-        "employer": "Google2",
-        "jobDescription": "Fixed bugs for leading tech company2",
+        "jobTitle": "Software Engineer",
+        "employer": "Microsoft",
+        "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "userEmail": "randibrown@resumebuilder.com"
     },
     {
-        "jobTitle": "Web Developer3",
-        "employer": "Google3",
-        "jobDescription": "At Google, I worked a lot on web development and fixing bugs for search, maps, and Gmail. I learned a lot about working with a team and coding as a unit. I worked with some of the best coders in the world and learned best practices and effecient coding techniques that I'm excited to apply further down the road in my career.",
+        "jobTitle": "Junior Developer",
+        "employer": "Intel",
+        "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "userEmail": "randibrown@resumebuilder.com"
+    },
+    {
+        "jobTitle": "Web Developer",
+        "employer": "Google",
+        "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "userEmail": "willgintz@resumebuilder.com"
     },
     {
-        "jobTitle": "Web Developer4",
-        "employer": "Google4",
-        "jobDescription": "At Google, I worked a lot on web development and fixing bugs for search, maps, and Gmail. I learned a lot about working with a team and coding as a unit. I worked with some of the best coders in the world and learned best practices and effecient coding techniques that I'm excited to apply further down the road in my career.",
+        "jobTitle": "Software Engineer",
+        "employer": "Microsoft",
+        "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "userEmail": "willgintz@resumebuilder.com"
     },
     {
-        "jobTitle": "Web Developer5",
-        "employer": "Google5",
-        "jobDescription": "Fixed bugs for leading tech compan5y",
+        "jobTitle": "Junior Developer",
+        "employer": "Intel",
+        "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "userEmail": "willgintz@resumebuilder.com"
+    },
+    {
+        "jobTitle": "Web Developer",
+        "employer": "Google",
+        "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "userEmail": "lucysmith@resumebuilder.com"
     },
     {
-        "jobTitle": "Web Developer6",
-        "employer": "Google6",
-        "jobDescription": "Fixed bugs for leading tech company6",
+        "jobTitle": "Software Engineer",
+        "employer": "Microsoft",
+        "jobDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "userEmail": "lucysmith@resumebuilder.com"
     }
 ]
