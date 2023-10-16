@@ -1,6 +1,6 @@
 import '../../src/index.css';
 import NavApp from "../components/Navigation";
-
+// if user is not logged in, they see this home page
 function Home() {
 
   return (

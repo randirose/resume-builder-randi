@@ -11,12 +11,14 @@ const NavApp = () => {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  // handles the nav links collapsing correctly when screen resizes
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
     <>
       <Navbar variant='light' expand='lg' className="fixed-top" style={{fontFamily: "Montserrat"}}>
         <Container fluid>
+          {/* if user is logged in, show app name and logo image, if not, only show logo image as main header in 'Home' will have app name */}
         {Auth.loggedIn() ? (
           <Navbar.Brand as={Link} to='/'>
             <img src="./logo.png" alt="logo" style={{width:'50px', height: '50px', marginLeft: '10px'}} className="m3"/> <span className="loggedin-nav-brand">RESUME BUILDER</span>
@@ -29,6 +31,7 @@ const NavApp = () => {
           <Navbar.Toggle aria-controls='navbar' aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}/>
           <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
             <Nav className='ml-auto d-flex'>
+              {/* if user is logged in, see Profile/Preview/Logout, otherwise only see Sign Up/Login */}
               {Auth.loggedIn() ? (
                 <>
                 <div class={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>

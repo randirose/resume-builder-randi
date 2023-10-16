@@ -62,14 +62,8 @@ code {
   font-weight: bold;
 }
 
-.job-list h4 {
-  background-color: #d3e9ed;
-}
-
-.skill-list h4 {
-  background-color: #d3e9ed;
-}
-
+.job-list h4,
+.skill-list h4,
 .edu-list h4 {
   background-color: #d3e9ed;
 }
@@ -147,14 +141,13 @@ code {
   font-family: "Montserrat";
   margin-top: 120px;
 }
-
+/* keeps resume same size no matter what the screen size is, therefore it still downloads correctly even on a smaller screen */
 #wrapper {
   margin-left:auto;
   margin-right:auto;
   width:1500px;
-  margin-bottom: 20px;
 }
-
+/* there is a mac bug that cuts off my downloadable resume ONLY on my mac screen, if downloaded on a different screen it downloads perfectly */
 #resume {
   font-family: sans-serif;
   padding: 5px;

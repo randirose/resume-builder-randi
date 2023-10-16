@@ -7,8 +7,14 @@
     },
     {
         "school": "Coding Bootcamp",
-        "dateRange": "2023",
+        "dateRange": "2022",
         "degree": "Full-stack coding",
+        "userEmail": "randibrown@resumebuilder.com"
+    },
+    {
+        "school": "UX Design Course",
+        "dateRange": "2023",
+        "degree": "UX design",
         "userEmail": "randibrown@resumebuilder.com"
     },
     {
@@ -19,8 +25,14 @@
     },
     {
         "school": "Coding Bootcamp",
-        "dateRange": "2023",
+        "dateRange": "2022",
         "degree": "Full-stack coding",
+        "userEmail": "willgintz@resumebuilder.com"
+    },
+    {
+        "school": "UX Design Course",
+        "dateRange": "2023",
+        "degree": "UX design",
         "userEmail": "willgintz@resumebuilder.com"
     },
     {

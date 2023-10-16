@@ -3,9 +3,7 @@ import {
     Button,
   } from 'react-bootstrap';
 import { GrCertificate } from "react-icons/gr";
-  
 
-// import Auth from '../utils/auth';
 import { REMOVE_EDUCATION } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
@@ -51,6 +49,7 @@ const EducationList = ({
           <div key={education._id} className="card mt-3">
             <h4 className="card-header p-2 m-0">
                 {education.school} | {education.dateRange}
+                {/* button to delete education/cert */}
                 <Button
                 className="btn btn-secondary"
                 style={{float: 'right', align: 'center'}}

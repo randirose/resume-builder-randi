@@ -15,6 +15,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Download from './pages/Download';
 import Auth from './utils/auth';
+
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -41,7 +42,7 @@ const client = new ApolloClient({
 
 function App() {
       
-
+// routes set up so user only sees Home component if logged out, sees everything else if logged in
   return (
     <ApolloProvider client={client}>
       <Router>

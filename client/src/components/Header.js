@@ -2,7 +2,7 @@ import '../../src/index.css';
 import NavApp from "./Navigation";
 
 function Header() {
-
+// this header only shows if user is logged in per routing in App.js
   return (
     <header className="flex-row px-1 fixed-top" >
 

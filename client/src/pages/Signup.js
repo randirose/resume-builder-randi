@@ -19,7 +19,6 @@ const Signup = () => {
     linkedIn: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
-  // const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -174,7 +173,7 @@ const Signup = () => {
                 </button>
               </form>
             )}
-
+            {/* took substring of error.message to make more readable/user friendly */}
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 SIGNUP ERROR: {error.message.substring(23)}

@@ -16,7 +16,7 @@ db.once('open', async () => {
 
     for (let i = 0; i < educationSeeds.length; i++) {
       const { _id, userEmail } = await Education.create(educationSeeds[i]);
-      const user2 = await User.findOneAndUpdate(
+      const user = await User.findOneAndUpdate(
         { email: userEmail },
         {
           $addToSet: {
@@ -28,7 +28,7 @@ db.once('open', async () => {
 
     for (let i = 0; i < jobSeeds.length; i++) {
       const { _id, userEmail } = await Job.create(jobSeeds[i]);
-      const user2 = await User.findOneAndUpdate(
+      const user = await User.findOneAndUpdate(
         { email: userEmail },
         {
           $addToSet: {
@@ -39,7 +39,7 @@ db.once('open', async () => {
     }
     for (let i = 0; i < skillSeeds.length; i++) {
         const { _id, userEmail } = await Skill.create(skillSeeds[i]);
-        const user3 = await User.findOneAndUpdate(
+        const user = await User.findOneAndUpdate(
           { email: userEmail },
           {
             $addToSet: {

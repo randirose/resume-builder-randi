@@ -1,14 +1,8 @@
 import '../../src/index.css';
-// import { Link } from 'react-router-dom';
 import {
-    // Container,
-    // Card,
     Button,
-    // Row,
-    // Col
   } from 'react-bootstrap';
 
-// import Auth from '../utils/auth';
 import { REMOVE_JOB } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
@@ -54,6 +48,7 @@ const JobList = ({
           <div key={job._id} className="card mt-3">
             <h4 className="card-header p-2 m-0">
                 {job.jobTitle} | {job.employer}
+                {/* button to remove job */}
                 <Button
                 className="btn btn-secondary"
                 style={{float: 'right', align: 'center'}}

@@ -26,7 +26,7 @@ const SkillForm = () => {
         console.error(e);
       }
 
-      // update me object's cache
+      // update 'me' object's cache
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
@@ -90,6 +90,7 @@ const SkillForm = () => {
                 Add Skill
               </button>
             </div>
+            {/* customized error message */}
             {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">
                 Skill name is required

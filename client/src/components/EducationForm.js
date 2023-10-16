@@ -1,3 +1,4 @@
+import '../../src/index.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
@@ -29,7 +30,7 @@ const EducationForm = () => {
         console.error(e);
       }
 
-      // update me object's cache
+      // update 'me' object's cache
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
@@ -116,6 +117,7 @@ const EducationForm = () => {
                 Add Education / Certificate
               </button>
             </div>
+            {/* took substring of error.message to make more readable/user friendly */}
             {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">
                 {error.message.substring(28)}

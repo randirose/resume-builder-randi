@@ -1,13 +1,9 @@
-// import { Link } from 'react-router-dom';
+import '../../src/index.css';
 import { REMOVE_SKILL } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 import {
-    // Container,
-    // Card,
     Button,
-    // Row,
-    // Col
   } from 'react-bootstrap';
 
 const SkillList = ({
@@ -52,7 +48,7 @@ const SkillList = ({
             <div key={skill._id} className="card mt-3">
               <h4 className="card-header p-2 m-0">
                   {skill.skillName}
-              
+              {/* button to delete skill */}
               <Button
                 className="btn btn-secondary"
                 style={{float: 'right'}}
