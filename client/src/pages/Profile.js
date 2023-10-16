@@ -65,9 +65,13 @@ const Profile = () => {
           />
         </div>
         </div>
-        <hr />
-      <div className="row mt-5">
-      <div className="col-12 col-md-7">
+        <div className="profile-toc">
+          <button className="btn btn-secondary"><a href="#jobs">View Jobs</a></button>
+          <button className="btn btn-secondary"><a href="#skills">View Skills</a></button>
+          <button className="btn btn-secondary"><a href="#edu">View Education & Certificates</a></button>
+        </div>
+      <div className="row mt-5" >
+      <div className="col-12 col-md-7" id="jobs">
           <JobList
             jobs={user.jobs}
             title={`${user.firstName}'s Jobs`}
@@ -83,7 +87,7 @@ const Profile = () => {
         )}
         </div>
         <div className="row mt-5">
-        <div className="col-12 col-md-7">
+        <div className="col-12 col-md-7" id="skills">
           <SkillList
             skills={user.skills}
             title={`${user.firstName}'s Skills`}
@@ -99,7 +103,7 @@ const Profile = () => {
         )}
         </div>
         <div className="row mt-5 mb-5">
-          <div className="col-12 col-md-7">
+          <div className="col-12 col-md-7" id="edu">
           <EducationList
             educations={user.educations}
             title={`${user.firstName}'s Education & Certificates`}

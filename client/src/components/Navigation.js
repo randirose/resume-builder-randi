@@ -15,7 +15,7 @@ const NavApp = () => {
 
   return (
     <>
-      <Navbar variant='light' expand='lg' className="fixed-top">
+      <Navbar variant='light' expand='lg' className="fixed-top" style={{fontFamily: "Montserrat"}}>
         <Container fluid>
         {Auth.loggedIn() ? (
           <Navbar.Brand as={Link} to='/'>

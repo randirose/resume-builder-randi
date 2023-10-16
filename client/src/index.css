@@ -1,19 +1,17 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Montserrat";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Montserrat";
 }
 
 /* Header and Nav styling */
 .bg-image {
+  font-family: "Montserrat";
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -27,12 +25,14 @@ code {
 }
 
 .loggedout-header {
+  font-family: "Montserrat";
   font-size: 500%;
   text-shadow: 2px 2px 2px white;
   font-style: italic;
 }
 
 .loggedin-nav-brand {
+  font-family: "Montserrat";
   margin-left: 10px;
   font-style: italic;
   font-weight: bold;
@@ -41,6 +41,7 @@ code {
 }
 
 .home-text {
+  font-family: "Montserrat";
   margin-left: 25%;
   margin-right: 25%;
 }
@@ -49,6 +50,7 @@ code {
 /* Profile styling */
 
 .profile {
+  font-family: "Montserrat";
   margin-top: 120px;
 }
 
@@ -109,6 +111,24 @@ code {
   background-color: #d3e9ed;
   font-weight: bolder;
   border: .5px solid black;
+  margin-bottom: 5px;
+}
+
+.profile-toc {
+  display: flex;
+  justify-content: center;
+}
+.profile-toc button {
+  color: black;
+  background-color: #d3e9ed;
+  font-weight: bolder;
+  border: .5px solid black;
+  margin-right: 5px;
+}
+
+.profile-toc button a {
+  color: black;
+  text-decoration: none;
 }
 
 .form-input {
@@ -123,6 +143,7 @@ code {
 /* Download page styling */
 
 .download {
+  font-family: "Montserrat";
   margin-top: 120px;
 }
 
@@ -134,14 +155,13 @@ code {
 }
 
 #resume {
+  font-family: sans-serif;
   padding: 5px;
   margin-left: 200px;
   margin-right: 400px;
-  /* padding-right: 300px; */
   padding-left: 75px;
   padding-right: 75px;
   margin-top: 20px;
-  /* border: .5px solid lightgray; */
 }
 
 .resume-header {
@@ -186,4 +206,44 @@ code {
 
 .resume-jobs {
   width: 100%;
+}
+
+/* footer styling */
+
+.footer-text {
+  font-family: "Montserrat";
+  font-size: 20px;
+  padding: 30px;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 65%;
+  font-weight: bold;
+  float: left;
+}
+
+.footer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(211, 233, 237), white);
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo-list {
+  float: right;
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-logo {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  font-size: 200%;
 }
