@@ -12,6 +12,7 @@ EdX Coding Bootcamp - Project 3
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
+- [Future Development](#future-development)
 - [Questions](#questions)
 
 
@@ -119,6 +120,13 @@ MIT License
 ## Test
 
 N/A
+
+## Future Development
+
+- Edit user & job functionality: edit user info, deactivate jobs for job-specific customization  
+- Create multiple resume templates for user to choose from  
+- Implement additional validation (right now, validation is minimal to allow for formatting/customization)  
+- LinkedIn integration: Pull in LinkedIn info (LinkedIn has a resume builder, but the formatting isn’t spectacular)  
 
 ## Questions?
 
