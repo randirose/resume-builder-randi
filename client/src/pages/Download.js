@@ -79,7 +79,7 @@ const generatePDF = () => {
         <Button onClick={generatePDF} type="button" className="btn btn-secondary download-button">Download Resume (PDF)</Button>
         </div>
         <div id="wrapper">
-        {/* below div is what gets converted to a pdf for user to download*/}
+        {/* below div is what gets converted to a pdf for user to download, sizing is set and NOT responsive so that resume gets downloaded in correct format no matter the screen size*/}
         <div id="resume">
         <h3 className="resume-header d-flex flex-row-reverse">{user.firstName} {user.lastName}</h3>
         <hr className="dividers"/>
