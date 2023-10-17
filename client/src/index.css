@@ -29,6 +29,7 @@ code {
   font-size: 500%;
   text-shadow: 2px 2px 2px white;
   font-style: italic;
+  margin-top: 20%;
 }
 
 .loggedin-nav-brand {
@@ -152,7 +153,7 @@ code {
   font-family: sans-serif;
   padding: 5px;
   margin-left: 200px;
-  margin-right: 500px;
+  margin-right: 400px;
   padding-left: 75px;
   padding-right: 75px;
   margin-top: 20px;
@@ -241,3 +242,4 @@ code {
   color: black;
   font-size: 200%;
 }
+

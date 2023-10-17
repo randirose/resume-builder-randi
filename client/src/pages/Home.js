@@ -11,7 +11,7 @@ function Home() {
         className='p-5 text-center bg-image'
         style={{ backgroundImage: "url('./hero2.png')", height: '1200px', width: '100%' }}
       >
-          <div className='d-flex justify-content-center align-items-center h-100'>
+          <div className='d-flex justify-content-center h-100'>
             <div className='text-dark'>
               <h1 className='loggedout-header mb-3'>RESUME BUILDER</h1>
               <h2 className='mb-3'>— Easily build a perfect resume! —</h2><br />

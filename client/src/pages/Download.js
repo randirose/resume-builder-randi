@@ -25,8 +25,15 @@ const generatePDF = () => {
     html2canvas(resume)
     .then((canvas) => {
       const imgData = canvas.toDataURL('image/png');
-      const pdf = new JsPDF();
-      pdf.addImage(imgData, 'PNG', 0, 0);
+      const pdf = new JsPDF('p', 'mm', 'a4', true);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+      const imgX = (pdfWidth - imgWidth * ratio) / 2;
+      const imgY = 0;
+      pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
       pdf.save("resume.pdf");  
     });
 };
