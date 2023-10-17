@@ -79,7 +79,7 @@ const generatePDF = () => {
         <Button onClick={generatePDF} type="button" className="btn btn-secondary download-button">Download Resume (PDF)</Button>
         </div>
         <div id="wrapper">
-        {/* There is a mac bug that cuts off my downloadable resume ONLY on my mac screen, if downloaded on a different screen it downloads perfectly */}
+        {/* below div is what gets converted to a pdf for user to download*/}
         <div id="resume">
         <h3 className="resume-header d-flex flex-row-reverse">{user.firstName} {user.lastName}</h3>
         <hr className="dividers"/>

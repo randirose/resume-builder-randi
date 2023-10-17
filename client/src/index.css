@@ -148,7 +148,7 @@ code {
   margin-right:auto;
   width:1500px;
 }
-/* there is a mac bug that cuts off my downloadable resume ONLY on my mac screen, if downloaded on a different screen it downloads perfectly */
+/* below styling is for the downloadable div */
 #resume {
   font-family: sans-serif;
   padding: 5px;
