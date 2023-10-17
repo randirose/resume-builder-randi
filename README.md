@@ -34,7 +34,7 @@ Users can:
 AS A member of the workforce and a job searcher,  
 I WANT to have an easy way to continuously add and remove jobs, skills, and education/certificates from a formatted resume,  
 SO THAT I can easily apply to multiple jobs with a nice looking resume, and,  
-SO THAT I can easily edit or adjust my resume on a continuous basis throught my career.  
+SO THAT I can easily edit or adjust my resume on a continuous basis throughout my career.  
 
 ## Acceptance Criteria
 
