@@ -98,12 +98,23 @@ Deployed site can be found here: https://secure-tundra-34525-b3ddf11b8e0b.heroku
 - You will see a preview of your resume. If everything looks good, click the download button and you'll have your PDF of your resume!
 - Edit your resume by removing any jobs/skills/certs, or adding additional ones on your profile page.  
 
-screenshots
+<img width="1440" alt="Home Page" src="https://github.com/randirose/resume-builder-randi/assets/128757891/efdc7152-158f-482a-b0ca-4ffd2ca244b9">  
+
+<img width="1440" alt="Login Screen" src="https://github.com/randirose/resume-builder-randi/assets/128757891/2ea2800d-a675-4a2a-91b0-ee777c4e4431">  
+
+<img width="1438" alt="User Profile" src="https://github.com/randirose/resume-builder-randi/assets/128757891/65e9484e-ca8d-4efe-b7a6-2b7d03012cfd">  
+
+<img width="1435" alt="Jobs" src="https://github.com/randirose/resume-builder-randi/assets/128757891/7eb13889-29cc-4b8b-995b-9e9095d12032">  
+
+<img width="1439" alt="Skills and Education" src="https://github.com/randirose/resume-builder-randi/assets/128757891/19de7a70-a374-4466-99cd-a1e3574c4665">  
+
+<img width="1440" alt="Download Page" src="https://github.com/randirose/resume-builder-randi/assets/128757891/b4554f4c-1849-47b1-b220-8e87f8a80139">  
+
+<img width="1440" alt="Screen Shot of Downloaded Resume" src="https://github.com/randirose/resume-builder-randi/assets/128757891/c7680217-bd45-45c0-9b45-15a69565e2c5">  
 
 ## License
 
-MIT License  
-See [LICENSE](/LICENSE) file in contatining directory  
+MIT License   
 
 ## Test
 
