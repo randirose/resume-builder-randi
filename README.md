@@ -12,9 +12,9 @@ EdX Coding Bootcamp - Project 3
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
+- [Credits](#credits)
 - [Future Development](#future-development)
 - [Questions](#questions)
-
 
 ## Description
 
@@ -120,6 +120,12 @@ MIT License
 ## Test
 
 N/A
+
+## Credits
+
+- This Medium blog post on how to make a React component downloadable: https://shivekkhurana.medium.com/how-to-create-pdfs-from-react-components-client-side-solution-7f506d9dfa6d  
+- Stack Overflow for help with sizing of the PDF: https://stackoverflow.com/questions/44989119/generating-a-pdf-file-from-react-components  
+- MERN and State class activities  
 
 ## Future Development
 
